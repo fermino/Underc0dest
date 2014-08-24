@@ -137,7 +137,7 @@
 				$_POST['10']
 			)
 		);
-		echo '<pre>'; var_dump($R); echo '</pre>';
+		
 		if(isset($R['points']) && isset($R['errors']))
 		{
 			if($R['points'] == 10 && $R['errors'] === array())

@@ -42,7 +42,6 @@
 							$this->Answers[$i]['q'],
 							$this->Answers[$i]['r'][$Answers[$i]],
 							$this->Answers[$i]['r'][$this->Answers[$i]['a']]
-							
 						));
 				}
 
@@ -58,8 +57,9 @@
 			}
 			catch (Exception $E)
 			{
-				// Log
-				return array('redirect' => $this->File);
+				error_log($E->getMessage() . NL, 3, 'error_log');
+				var_dump($E);
+				return array('redirect' => $_SERVER['REQUEST_URI']);
 			}
 		}
 
