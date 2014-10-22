@@ -1,7 +1,7 @@
 <?php
 	class Examen
 	{
-		private $File = 'examen.html';
+		private $File = 'examen.php';
 		private $Answers = array
 		(
 			array
