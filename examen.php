@@ -142,9 +142,60 @@
 		}
 		else if(isset($R['redirect']))
 			header("Location: {$R['redirect']}");
+		else exit;
 	}
 	else
-		header('Location:examen.html?e=error'); //FIX HARDCODE
+	{
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exámen Wireless | Underc0de</title>
 
-	// TODO: 
-	// Change header for echo;*/
+		<meta charset="UTF-8">
+
+		<meta name="author" content="fermino">
+		<meta name="description" content="Exámen online en el área de Wireless. Seguridad, Hacking, etc...">
+		<meta name="keywords" content="wireless, hacking, cracking, examen">
+	</head>
+	<body>
+		<h1>Exámen Wireless | Underc0de</h1>
+		<form action="examen.php" method="post">
+			<input type="radio" name="1" value="1">Respuesta a<br>
+			<input type="radio" name="1" value="2">Respuesta b<br>
+			<input type="radio" name="1" value="3">Respuesta c<br>
+			<input type="radio" name="2" value="1">Respuesta a<br>
+			<input type="radio" name="2" value="2">Respuesta b<br>
+			<input type="radio" name="2" value="3">Respuesta c<br>
+			<input type="radio" name="3" value="1">Respuesta a<br>
+			<input type="radio" name="3" value="2">Respuesta b<br>
+			<input type="radio" name="3" value="3">Respuesta c<br>
+			<input type="radio" name="4" value="1">Respuesta a<br>
+			<input type="radio" name="4" value="2">Respuesta b<br>
+			<input type="radio" name="4" value="3">Respuesta c<br>
+			<input type="radio" name="5" value="1">Respuesta a<br>
+			<input type="radio" name="5" value="2">Respuesta b<br>
+			<input type="radio" name="5" value="3">Respuesta c<br>
+			<input type="radio" name="6" value="1">Respuesta a<br>
+			<input type="radio" name="6" value="2">Respuesta b<br>
+			<input type="radio" name="6" value="3">Respuesta c<br>
+			<input type="radio" name="7" value="1">Respuesta a<br>
+			<input type="radio" name="7" value="2">Respuesta b<br>
+			<input type="radio" name="7" value="3">Respuesta c<br>
+			<input type="radio" name="8" value="1">Respuesta a<br>
+			<input type="radio" name="8" value="2">Respuesta b<br>
+			<input type="radio" name="8" value="3">Respuesta c<br>
+			<input type="radio" name="9" value="1">Respuesta a<br>
+			<input type="radio" name="9" value="2">Respuesta b<br>
+			<input type="radio" name="9" value="3">Respuesta c<br>
+			<input type="radio" name="10" value="1">Respuesta a<br>
+			<input type="radio" name="10" value="2">Respuesta b<br>
+			<input type="radio" name="10" value="3">Respuesta c<br>
+
+			<input type="submit" name="submit" value="Listo!">
+		</form>
+	</body>
+</html>
+<?php
+	}
+?>
