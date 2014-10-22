@@ -1,105 +1,76 @@
 <?php
-	class Examen
-	{
-		private $File = 'examen.php';
-		private $Answers = array
+	require_once 'underc0dest.class.php';
+
+	##### BEGIN CONFIG #####
+	$TestName = 'test';
+	$Answers = array
+	(
+		array
 		(
-			array
-			(
-				'q' => 'Pregunta?',
-				'r' => 'Respuesta',
-				'a' => 1
-			),
-			array
-			(
-				'q' => 'Pregunta?',
-				'r' => 'Respuesta',
-				'a' => 1
-			),
-			array
-			(
-				'q' => 'Pregunta?',
-				'r' => 'Respuesta',
-				'a' => 1
-			),
-			array
-			(
-				'q' => 'Pregunta?',
-				'r' => 'Respuesta',
-				'a' => 1
-			),
-			array
-			(
-				'q' => 'Pregunta?',
-				'r' => 'Respuesta',
-				'a' => 1
-			),
-			array
-			(
-				'q' => 'Pregunta?',
-				'r' => 'Respuesta',
-				'a' => 1
-			),
-			array
-			(
-				'q' => 'Pregunta?',
-				'r' => 'Respuesta',
-				'a' => 1
-			),
-			array
-			(
-				'q' => 'Pregunta?',
-				'r' => 'Respuesta',
-				'a' => 1
-			),
-			array
-			(
-				'q' => 'Pregunta?',
-				'r' => 'Respuesta',
-				'a' => 1
-			),
-			array
-			(
-				'q' => 'Pregunta?',
-				'r' => 'Respuesta',
-				'a' => 1
-			)
-		);
-
-		public function Check($Answers)
-		{
-			try
-			{
-				$Points = 0;
-				$Errors = array();
-
-				$Count = count($Answers);
-
-				for($i = 0; $i < $Count; $i++)
-				{
-					if($Answers[$i] == $this->Answers[$i]['a'])
-						$Points++;
-					else
-						array_push($Errors, array($Answers[$i], $this->Answers[$i]['q'], $this->Answers[$i]['r']));
-				}
-
-				return array
-				(
-					'points' => $Points,
-					'errors' => $Errors
-				);
-			}
-			catch (Exception $E)
-			{
-				// Log
-				return array('redirect' => $this->File);
-			}
-		}
-	}
+			'q' => 'Pregunta?',
+			'r' => 'Respuesta',
+			'a' => 1
+		),
+		array
+		(
+			'q' => 'Pregunta?',
+			'r' => 'Respuesta',
+			'a' => 1
+		),
+		array
+		(
+			'q' => 'Pregunta?',
+			'r' => 'Respuesta',
+			'a' => 1
+		),
+		array
+		(
+			'q' => 'Pregunta?',
+			'r' => 'Respuesta',
+			'a' => 1
+		),
+		array
+		(
+			'q' => 'Pregunta?',
+			'r' => 'Respuesta',
+			'a' => 1
+		),
+		array
+		(
+			'q' => 'Pregunta?',
+			'r' => 'Respuesta',
+			'a' => 1
+		),
+		array
+		(
+			'q' => 'Pregunta?',
+			'r' => 'Respuesta',
+			'a' => 1
+		),
+		array
+		(
+			'q' => 'Pregunta?',
+			'r' => 'Respuesta',
+			'a' => 1
+		),
+		array
+		(
+			'q' => 'Pregunta?',
+			'r' => 'Respuesta',
+			'a' => 1
+		),
+		array
+		(
+			'q' => 'Pregunta?',
+			'r' => 'Respuesta',
+			'a' => 1
+		)
+	);
+	###### END CONFIG ######
 
 	if(isset($_POST['1']) && isset($_POST['2']) && isset($_POST['3']) && isset($_POST['4']) && isset($_POST['5']) && isset($_POST['6']) && isset($_POST['7']) && isset($_POST['8']) && isset($_POST['9']) && isset($_POST['10']))
 	{
-		$E = new Examen();
+		$E = new Underc0dest($TestName, $Answers);
 		$R = $E->Check
 		(
 			array
