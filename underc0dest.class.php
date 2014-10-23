@@ -10,7 +10,7 @@
 		{
 			$this->Logfile = 'log' . DIRECTORY_SEPARATOR . "{$Testname}.log";
 			$this->Answers = $Answers;
-			
+
 			if(!is_dir('log'))
 				if(!mkdir('log'))
 					throw new Exception("Can't create log folder");
@@ -33,7 +33,7 @@
 					if($Answers[$i] == $this->Answers[$i]['a'])
 						$Points++;
 					else
-						array_push($Errors, array($Answers[$i], $this->Answers[$i]['q'], $this->Answers[$i]['r']));
+						array_push($Errors, array($i, $this->Answers[$i]['q'], $this->Answers[$i]['r'], $Answers[$i]));
 				}
 
 				$Results = array
