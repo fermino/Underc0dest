@@ -1,4 +1,6 @@
 <?php
+	const NL = "\n";
+
 	final class Underc0dest
 	{
 		private $Logfile = null;
@@ -8,7 +10,7 @@
 		{
 			$this->Logfile = 'log' . DIRECTORY_SEPARATOR . "{$Testname}.log";
 			$this->Answers = $Answers;
-			var_dump($Testname, $this->Logfile);
+			
 			if(!is_dir('log'))
 				if(!mkdir('log'))
 					throw new Exception("Can't create log folder");
@@ -34,16 +36,41 @@
 						array_push($Errors, array($Answers[$i], $this->Answers[$i]['q'], $this->Answers[$i]['r']));
 				}
 
-				return array
+				$Results = array
 				(
 					'points' => $Points,
 					'errors' => $Errors
 				);
+
+				$this->log($Results);
+
+				return $Results;
 			}
 			catch (Exception $E)
 			{
 				// Log
 				return array('redirect' => $this->File);
 			}
+		}
+
+		private function log($Results)
+		{
+			$Data = '';
+
+			$Data .= "Puntaje: {$Results['points']}";
+			$Data .= NL;
+
+			foreach($Results['errors'] as $Error)
+			{
+				$Data .= "Error: {$Error[0]}. {$Error[1]} - {$Error[2]}";
+				$Data .= NL;
+			}
+
+			$Data .= '-';
+			$Data .= NL;
+
+			$Data = (is_file($this->Logfile) && is_readable($this->Logfile)) ? file_get_contents($this->Logfile) . $Data : $Data;
+
+			file_put_contents($this->Logfile, $Data);
 		}
 	}
