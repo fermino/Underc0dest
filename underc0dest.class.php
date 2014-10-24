@@ -23,6 +23,9 @@
 		{
 			try
 			{
+				if(count($Answers) != count($this->Answers))
+					return -1;
+				
 				$Points = 0;
 				$Errors = array();
 
@@ -33,7 +36,14 @@
 					if($Answers[$i] == $this->Answers[$i]['a'])
 						$Points++;
 					else
-						array_push($Errors, array($i, $this->Answers[$i]['q'], $this->Answers[$i]['r'], $Answers[$i]));
+						array_push($Errors, array
+						(
+							$i,
+							$this->Answers[$i]['q'],
+							$this->Answers[$i]['r'][$Answers[$i]],
+							$this->Answers[$i]['r'][$this->Answers[$i]['a']]
+							
+						));
 				}
 
 				$Results = array
