@@ -62,6 +62,17 @@
 			}
 		}
 
+		public function __Utils__CheckPOSTVars($From = 0, $To = 10)
+		{
+			for(; $From < $To; $From++)
+			{
+				if(!isset($_POST["{$From}"]))
+					return false;
+			}
+
+			return true;
+		}
+
 		private function log($Results)
 		{
 			$Data = '';

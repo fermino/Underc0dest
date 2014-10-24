@@ -132,10 +132,10 @@
 	<body>
 		<h1><?=$TestName ?> | Underc0de</h1>
 <?php
-	if(isset($_POST['0']) && isset($_POST['1']) && isset($_POST['2']) && isset($_POST['3']) && isset($_POST['4']) && isset($_POST['5']) && isset($_POST['6']) && isset($_POST['7']) && isset($_POST['8']) && isset($_POST['9']))
-	{
-		$E = new Underc0dest($TestName, $Answers);
+	$E = new Underc0dest($TestName, $Answers);
 
+	if($E->__Utils__CheckPOSTVars())
+	{
 		$R = $E->Check
 		(
 			array
@@ -158,9 +158,10 @@
 
 		if(isset($R['points']) && isset($R['errors']))
 		{
-			echo "Puntaje: {$R['points']}/10";
-			echo '<br>';
-
+?>
+		Puntaje: <?=$R['points']?>/10
+		<br>
+<?php
 			if($R['points'] == 10 && $R['errors'] === array())
 			{
 				echo '¡Felicitaciones! No has cometido ningún error';
