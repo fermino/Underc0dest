@@ -121,6 +121,7 @@
 	if(isset($_POST['1']) && isset($_POST['2']) && isset($_POST['3']) && isset($_POST['4']) && isset($_POST['5']) && isset($_POST['6']) && isset($_POST['7']) && isset($_POST['8']) && isset($_POST['9']) && isset($_POST['10']))
 	{
 		$E = new Underc0dest($TestName, $Answers);
+
 		$R = $E->Check
 		(
 			array
@@ -137,19 +138,21 @@
 				$_POST['10']
 			)
 		);
-		
+
+		if($R === -1)
+			header("Location: {$_SERVER['REQUEST_URI']}");
+
 		if(isset($R['points']) && isset($R['errors']))
 		{
+			echo "Puntaje: {$R['points']}/10";
+			echo '<br>';
+
 			if($R['points'] == 10 && $R['errors'] === array())
 			{
-				echo 'Puntaje: 10/10';
-				echo '<br>';
 				echo '¡Felicitaciones! No has cometido ningún error';
 			}
 			else
 			{
-				echo "Puntaje: {$R['points']}/10";
-				echo '<br>';
 				echo 'Has cometido algunos errores: ';
 
 				foreach($R['errors'] as $Error)
@@ -157,7 +160,9 @@
 					echo '<br>';
 					echo "{$Error[0]}. {$Error[1]}";
 					echo '<br>';
-					echo "Respuesta correcta: {$Error[2]}";
+					echo "Has respondido: {$Error[2]}";
+					echo '<br>';
+					echo "Respuesta correcta: {$Error[3]}";
 				}
 			}
 		}

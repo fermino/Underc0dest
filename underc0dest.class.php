@@ -58,7 +58,6 @@
 			catch (Exception $E)
 			{
 				error_log($E->getMessage() . NL, 3, 'error_log');
-				var_dump($E);
 				return array('redirect' => $_SERVER['REQUEST_URI']);
 			}
 		}
@@ -72,7 +71,7 @@
 
 			foreach($Results['errors'] as $Error)
 			{
-				$Data .= "Error: {$Error[0]}. {$Error[1]} ({$Error[2]}) - {$Error[3]}";
+				$Data .= "Error: {$Error[0]}. {$Error[1]} ({$Error[3]}) - {$Error[2]}";
 				$Data .= NL;
 			}
 
