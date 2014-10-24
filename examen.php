@@ -118,7 +118,7 @@
 	);
 	###### END CONFIG ######
 
-	if(isset($_POST['1']) && isset($_POST['2']) && isset($_POST['3']) && isset($_POST['4']) && isset($_POST['5']) && isset($_POST['6']) && isset($_POST['7']) && isset($_POST['8']) && isset($_POST['9']) && isset($_POST['10']))
+	if(isset($_POST['0']) && isset($_POST['1']) && isset($_POST['2']) && isset($_POST['3']) && isset($_POST['4']) && isset($_POST['5']) && isset($_POST['6']) && isset($_POST['7']) && isset($_POST['8']) && isset($_POST['9']))
 	{
 		$E = new Underc0dest($TestName, $Answers);
 
@@ -126,6 +126,7 @@
 		(
 			array
 			(
+				$_POST['0'],
 				$_POST['1'],
 				$_POST['2'],
 				$_POST['3'],
@@ -134,8 +135,7 @@
 				$_POST['6'],
 				$_POST['7'],
 				$_POST['8'],
-				$_POST['9'],
-				$_POST['10']
+				$_POST['9']
 			)
 		);
 
