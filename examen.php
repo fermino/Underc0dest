@@ -121,7 +121,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Exámen Wireless | Underc0de</title>
+		<title><?=$TestName?> | Underc0de</title>
 
 		<meta charset="UTF-8">
 
