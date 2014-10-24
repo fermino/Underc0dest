@@ -134,7 +134,7 @@
 <?php
 	$E = new Underc0dest($TestName, $Answers);
 
-	if($E->__Utils__CheckPOSTVars())
+	if($E::__Utils__CheckPOSTVars())
 	{
 		$R = $E->Check
 		(
@@ -164,20 +164,25 @@
 <?php
 			if($R['points'] == 10 && $R['errors'] === array())
 			{
-				echo '¡Felicitaciones! No has cometido ningún error';
+?>
+		¡Felicitaciones! No has cometido ningún error
+<?php
 			}
 			else
 			{
-				echo 'Has cometido algunos errores: ';
-
+?>
+		Has cometido algunos errores: 
+<?php
 				foreach($R['errors'] as $Error)
 				{
-					echo '<br>';
-					echo "{$Error[0]}. {$Error[1]}";
-					echo '<br>';
-					echo "Has respondido: {$Error[2]}";
-					echo '<br>';
-					echo "Respuesta correcta: {$Error[3]}";
+?>
+		<br>
+		<?=$Error[0]?>. <?=$Error[1]?>
+		<br>
+		Has respondido: <?=$Error[2]?>
+		<br>
+		Respuesta correcta: <?=$Error[3]?>
+<?php
 				}
 			}
 		}

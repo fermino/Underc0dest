@@ -62,7 +62,7 @@
 			}
 		}
 
-		public function __Utils__CheckPOSTVars($From = 0, $To = 10)
+		public static function __Utils__CheckPOSTVars($From = 0, $To = 10)
 		{
 			for(; $From < $To; $From++)
 			{
