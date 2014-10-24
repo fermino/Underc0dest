@@ -166,9 +166,8 @@
 				}
 			}
 		}
-		else if(isset($R['redirect']))
-			header("Location: {$R['redirect']}");
-		else exit;
+		else
+			header("Location: {$_SERVER['REQUEST_URI']}");
 	}
 	else
 	{

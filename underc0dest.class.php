@@ -58,7 +58,7 @@
 			catch (Exception $E)
 			{
 				error_log($E->getMessage() . NL, 3, 'error_log');
-				return array('redirect' => $_SERVER['REQUEST_URI']);
+				return false;
 			}
 		}
 
