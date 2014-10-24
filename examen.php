@@ -185,39 +185,24 @@
 		<meta name="keywords" content="wireless, hacking, cracking, examen">
 	</head>
 	<body>
-		<h1>Exámen Wireless | Underc0de</h1>
-		<form action="examen.php" method="post">
-			<input type="radio" name="1" value="0">Respuesta a<br>
-			<input type="radio" name="1" value="1">Respuesta b<br>
-			<input type="radio" name="1" value="2">Respuesta c<br>
-			<input type="radio" name="2" value="0">Respuesta a<br>
-			<input type="radio" name="2" value="1">Respuesta b<br>
-			<input type="radio" name="2" value="2">Respuesta c<br>
-			<input type="radio" name="3" value="0">Respuesta a<br>
-			<input type="radio" name="3" value="1">Respuesta b<br>
-			<input type="radio" name="3" value="2">Respuesta c<br>
-			<input type="radio" name="4" value="0">Respuesta a<br>
-			<input type="radio" name="4" value="1">Respuesta b<br>
-			<input type="radio" name="4" value="2">Respuesta c<br>
-			<input type="radio" name="5" value="0">Respuesta a<br>
-			<input type="radio" name="5" value="1">Respuesta b<br>
-			<input type="radio" name="5" value="2">Respuesta c<br>
-			<input type="radio" name="6" value="0">Respuesta a<br>
-			<input type="radio" name="6" value="1">Respuesta b<br>
-			<input type="radio" name="6" value="2">Respuesta c<br>
-			<input type="radio" name="7" value="0">Respuesta a<br>
-			<input type="radio" name="7" value="1">Respuesta b<br>
-			<input type="radio" name="7" value="2">Respuesta c<br>
-			<input type="radio" name="8" value="0">Respuesta a<br>
-			<input type="radio" name="8" value="1">Respuesta b<br>
-			<input type="radio" name="8" value="2">Respuesta c<br>
-			<input type="radio" name="9" value="0">Respuesta a<br>
-			<input type="radio" name="9" value="1">Respuesta b<br>
-			<input type="radio" name="9" value="2">Respuesta c<br>
-			<input type="radio" name="10" value="0">Respuesta a<br>
-			<input type="radio" name="10" value="1">Respuesta b<br>
-			<input type="radio" name="10" value="2">Respuesta c<br>
-
+		<h1><?php echo $TestName ?> | Underc0de</h1>
+		<form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">
+<?php
+			$ic = count($Answers);
+			for($i = 0; $i < $ic; $i++)
+			{
+?>
+			<h3><?php echo $Answers[$i]['q']; ?></h3>
+<?php
+				$jc = count($Answers[$i]['r']);
+				for($j = 0; $j < $jc; $j++)
+				{
+?>
+			<input type="radio" name="<?php echo $i; ?>" value="<?php echo $j; ?>"><?php echo $Answers[$i]['r'][$j]; ?><br>
+<?php
+				}
+			}
+?>
 			<input type="submit" name="submit" value="Listo!">
 		</form>
 	</body>
