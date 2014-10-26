@@ -56,6 +56,7 @@
 			if(isset($R['points']) && isset($R['errors']))
 			{
 ?>
+		<script src="resources/stardust.js"></script>
 		<h3>Puntaje: <?=$R['points']?>/10</h3>
 <?php
 				if($R['points'] == 10 && $R['errors'] === array())
