@@ -73,12 +73,10 @@
 					foreach($R['errors'] as $Error)
 					{
 ?>
-		<br><br>
-		<?=$Error[0]?>. <?=$Error[1]/*FIXEAR NUMEROS*/?> 
 		<br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Has respondido: <?=$Error[2]?>
-		<br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Respuesta correcta: <?=$Error[3]?>
+		<?=$Error[0] + 1?>. <?=$Error[1]?><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Has respondido: <?=$Error[2]?><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Respuesta correcta: <?=$Error[3]?><br>
 <?php
 					}
 				}
