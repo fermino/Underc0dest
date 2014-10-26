@@ -73,7 +73,7 @@
 			return true;
 		}
 
-		private function log($Results)
+		private function log($Results) // LOG IP, BROWSER AND OTHER DATA
 		{
 			$Data = '';
 
