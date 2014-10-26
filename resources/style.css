@@ -42,6 +42,11 @@ a.boton:hover{
 *
 {
   color: #AEAEAE;
+  font-family: Courier, serif;
+  /*font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;*/
+}
+h3
+{
   font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
 }
 
@@ -187,7 +192,7 @@ dt {
   top: 0px;
   right: 0px;
   width: 20%;
-  margin:20px;
+  margin: 20px;
   padding: 10px;
   background-color: #EAEAEA;
   border-radius: 5px;
@@ -202,4 +207,17 @@ dt {
   font-size: 12px;
   color:#AEAEAE;
   text-align: left;
+}
+
+#HideBoxImg
+{
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin-left: 10px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  background-image:url('resources/close.png');
+background-repeat:no-repeat;
 }
