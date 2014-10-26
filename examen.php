@@ -16,18 +16,18 @@
 		<script src="resources/underc0dest.js"></script>
 	</head>
 	<body>
-	<div align="center">
-		<a href="http://undercde.org/foro/" title="Volver al foro...">
-			<img src="http://underc0de.org/foro/Themes/underblack/images/theme/logo.png">
-		</a>
-		<hr>
-	</div>
-	<h1><?=$TestName ?></h1>
-	<div id="flotante">
-		<img id="HideBoxImg" src="resources/close.png" onClick="HideBox()">
-		<p>Mas que una comunidad informática Underc0de es una gran familia de la que formas parte fundamental, aquí las ideas fluyen libres, los conocimientos van y vienen en todas direcciones, pero necesitamos de ti para hacerlo posible. Anímate completando el siguiente ********** (formulario, test, examen, no se...) Te sonríes un poco y al mismo tiempo nos ayudas a enfocar nuestros materiales en beneficio de ustedes los underc0ders.</p>
-		<a href="http://underc0de.org/" title="Volver al foro...">Volver al foro...</a>
-	</div>
+		<div align="center">
+			<a href="http://undercde.org/foro/" title="Volver al foro...">
+				<img src="http://underc0de.org/foro/Themes/underblack/images/theme/logo.png">
+			</a>
+			<hr>
+		</div>
+		<h1><?=$TestName ?></h1>
+		<div id="flotante">
+			<img id="HideBoxImg" src="resources/close.png" onClick="HideBox()">
+			<p>Mas que una comunidad informática Underc0de es una gran familia de la que formas parte fundamental, aquí las ideas fluyen libres, los conocimientos van y vienen en todas direcciones, pero necesitamos de ti para hacerlo posible. Anímate completando el siguiente ********** (formulario, test, examen, no se...) Te sonríes un poco y al mismo tiempo nos ayudas a enfocar nuestros materiales en beneficio de ustedes los underc0ders.</p>
+			<a href="http://underc0de.org/" title="Volver al foro...">Volver al foro...</a>
+		</div>
 <?php
 		$E = new Underc0dest($TestName, $Answers);
 
