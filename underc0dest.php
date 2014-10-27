@@ -39,7 +39,7 @@
 ?>
 			<div id="FloatLogin">
 				<hr>
-				<input name="login" id="Login" type="text" autocomplete="off" placeholder="Si quieres, loguéate">&nbsp;<button onClick="FloatBox_Login()">Login</button>
+				<input name="login" id="Login" type="text" autocomplete="off" placeholder="Si quieres, logueate">&nbsp;<button onClick="FloatBox_Login()">Login</button>
 			</div>
 <?php
 		}
