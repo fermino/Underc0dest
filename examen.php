@@ -110,7 +110,8 @@
 					}
 				}
 ?>
-			<input type="submit" name="submit" value="Listo!">
+			<br>
+			<input type="submit" name="submit" value="¡Listo!">
 		</form>
 <?php
 		}
