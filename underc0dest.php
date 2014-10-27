@@ -29,15 +29,24 @@
 			<img id="HideBoxImg" src="resources/close.png" onClick="FloatBox_Hide()">
 			<p>Mas que una comunidad informática Underc0de es una gran familia de la que formas parte fundamental, aquí las ideas fluyen libres, los conocimientos van y vienen en todas direcciones, pero necesitamos de ti para hacerlo posible. Anímate completando el siguiente ********** (formulario, test, examen, no se...) Te sonríes un poco y al mismo tiempo nos ayudas a enfocar nuestros materiales en beneficio de ustedes los underc0ders.</p>
 			<a href="http://underc0de.org/foro/" title="Volver al foro...">Volver al foro...</a>
+<?php
+		$E = new Underc0dest($TestName, $Answers);
+
+		$P = $E::__Utils__CheckPOSTVars();
+
+		if(!$P)
+		{
+?>
 			<div id="FloatLogin">
 				<hr>
 				<input name="login" id="Login" type="text" autocomplete="off" placeholder="Si quieres, loguéate">&nbsp;<button onClick="FloatBox_Login()">Login</button>
 			</div>
+<?php
+		}
+?>
 		</div>
 <?php
-		$E = new Underc0dest($TestName, $Answers);
-
-		if($E::__Utils__CheckPOSTVars())
+		if($P)
 		{
 			$R = $E->Check
 			(
