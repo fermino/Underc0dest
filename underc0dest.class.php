@@ -75,22 +75,30 @@
 
 		private function log($Results) // LOG IP, BROWSER AND OTHER DATA
 		{
-			$Data = '';
-
-			$Data .= "Puntaje: {$Results['points']}";
-			$Data .= NL;
-
-			foreach($Results['errors'] as $Error)
+			try
 			{
-				$Data .= "Error: {$Error[0]}. {$Error[1]} ({$Error[3]}) - {$Error[2]}";
+				$Data = '';
+
+				$Data .= "Puntaje: {$Results['points']}";
 				$Data .= NL;
+
+				foreach($Results['errors'] as $Error)
+				{
+					$Data .= "Error: {$Error[0]}. {$Error[1]} ({$Error[3]}) - {$Error[2]}";
+					$Data .= NL;
+				}
+
+				$Data .= '-';
+				$Data .= NL;
+
+				$Data = (is_file($this->Logfile) && is_readable($this->Logfile)) ? file_get_contents($this->Logfile) . $Data : $Data;
+
+				file_put_contents($this->Logfile, $Data);
 			}
-
-			$Data .= '-';
-			$Data .= NL;
-
-			$Data = (is_file($this->Logfile) && is_readable($this->Logfile)) ? file_get_contents($this->Logfile) . $Data : $Data;
-
-			file_put_contents($this->Logfile, $Data);
+			catch (Exception $E)
+			{
+				error_log($E->getMessage() . NL, 3, 'error_log');
+				return false;
+			}
 		}
 	}
