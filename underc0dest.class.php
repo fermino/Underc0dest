@@ -1,4 +1,6 @@
 <?php
+	session_start();
+
 	const NL = "\n";
 
 	final class Underc0dest
@@ -73,13 +75,17 @@
 			return true;
 		}
 
-		private function log($Results) // LOG IP, BROWSER AND OTHER DATA
+		private function log($Results)
 		{
 			try
 			{
 				$Data = '';
 
-				$Data .= "Puntaje: {$Results['points']}";
+				$Data .= "Puntaje: {$Results['points']} ({$_SERVER['REMOTE_ADDR']}) ({$_SERVER['HTTP_USER_AGENT']})";
+
+				if(isset($_SESSION['underc0dest_uname']))
+					$Data .= " ({$_SESSION['underc0dest_uname']})";
+
 				$Data .= NL;
 
 				foreach($Results['errors'] as $Error)
