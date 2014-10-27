@@ -49,7 +49,7 @@
 		),
 		array
 		(
-			'q' => 'Eres informático, ya sabes que los vecinos piensan que debes saber y responder a todo lo relacionado con el tema (je-je) así, cuando te preguntan, ¿en cuál de los casos el rendimiento de una red es superior? Le respondes...',
+			'q' => 'Eres informático, ya sabes que los vecinos piensan que debes saber y responder a todo lo relacionado con el tema (je-je) así que, cuando te preguntan, ¿en cuál de los casos el rendimiento de una red es superior? Le respondes...',
 			'a' => 0,
 			'r' => array
 			(
