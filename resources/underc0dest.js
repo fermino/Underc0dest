@@ -1,11 +1,16 @@
 function Form_Validate()
 {
-	// VALIDAR RADIOS
-}
+	var Checked = 0;
+	var Underc0dest = document.getElementById('Underc0dest');
 
-function Form_Send()
-{
-	// ENVIAR
+	for(i = 0; i < Underc0dest.length; i++)
+		if(Underc0dest[i].checked == true)
+			Checked++;
+
+	if(Checked == 10)
+		Underc0dest.submit();
+	else
+		alert('Debes completar todo el formulario...');
 }
 
 function FloatBox_Login()

@@ -1,5 +1,6 @@
 <?php
 	error_reporting(0);
+	session_start();
 	if(is_file('underc0dest.class.php'))
 		require_once 'underc0dest.class.php';
 	else
@@ -34,7 +35,7 @@
 
 		$P = $E::__Utils__CheckPOSTVars();
 
-		if(!$P)
+		if(!$P && !isset($_SESSION['underc0dest_uname']))
 		{
 ?>
 			<div id="FloatLogin">
@@ -66,7 +67,7 @@
 			);
 
 			if($R === -1)
-				header("Location: {$_SERVER['REQUEST_URI']}");
+				exit;
 
 			if(isset($R['points']) && isset($R['errors']))
 			{
@@ -97,12 +98,12 @@
 				}
 			}
 			else
-				header("Location: {$_SERVER['REQUEST_URI']}");
+				exit;
 		}
 		else
 		{
 ?>
-		<form action="<?=$_SERVER['REQUEST_URI']?>" method="post">
+		<form id="Underc0dest" action="<?=$_SERVER['REQUEST_URI']?>" method="post">
 <?php
 				$ic = count($Answers);
 				for($i = 0; $i < $ic; $i++)
@@ -120,7 +121,7 @@
 				}
 ?>
 			<br>
-			<input type="submit" name="submit" value="¡Listo!">
+			<button onClick="Form_Validate();">¡Listo!</button>
 		</form>
 <?php
 		}
