@@ -35,7 +35,7 @@
 
 		$P = $E::__Utils__CheckPOSTVars();
 
-		if(!$P && !isset($_SESSION['underc0dest_uname']))
+		if(!$P && !isset($_SESSION['underc0dest_uname'])) // if(!($P || $Session))?
 		{
 ?>
 			<div id="FloatLogin">
@@ -131,3 +131,8 @@
 ?>
 </body>
 </html>
+<?php 
+	/**
+	* To do: 
+	* Fix buttons
+	*/
