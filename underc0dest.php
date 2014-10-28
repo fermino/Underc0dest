@@ -20,7 +20,7 @@
 	</head>
 	<body>
 		<div align="center">
-			<a href="http://undercde.org/foro/" title="Volver al foro...">
+			<a href="http://underc0de.org/foro/" title="Volver al foro...">
 				<img src="http://underc0de.org/foro/Themes/underblack/images/theme/logo.png">
 			</a>
 			<hr>
