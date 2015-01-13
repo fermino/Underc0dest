@@ -21,7 +21,7 @@
 	<body>
 		<div align="center">
 			<a href="http://underc0de.org/foro/" title="Volver al foro...">
-				<img src="http://underc0de.org/foro/Themes/underblack/images/theme/logo.png">
+				<img src="http://underc0de.org/foro/Themes/Underc0de2015/images/theme/logo.png">
 			</a>
 			<hr>
 		</div>
