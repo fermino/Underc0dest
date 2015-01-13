@@ -73,7 +73,7 @@
 		array
 		(
 			'q' => 'Trampas, ¿habéis dicho trampas? ¿Qué es un honeypot?',
-			'a' => 2,
+			'a' => 0,
 			'r' => array
 			(
 				'Es una técnica utilizada para atraer a los atacantes y desviar su atención',
@@ -88,7 +88,7 @@
 			'a' => 1,
 			'r' => array
 			(
-				'Es un juego de guerra que implica coches (recuerdan twisted metal?)',
+				'Es un juego de guerra que implica coches (recuerdas twisted metal?)',
 				'Implica un coche, ordenador portatil, antenas, GPS, buscando redes vulnerables para luego registrar su geo-localización en algún website',
 				'Es un conflicto de dispositivos entre los drivers de dos tarjetas inalámbricas'
 			)
@@ -111,7 +111,7 @@
 			'r' => array
 			(
 				'Es un método de defensa que consiste en amenazar a los vecinos con golpes y palos si se conectan a nuestra red',
-				'Es un método de auditoría que consiste en probar todas las posibles combinaciones de caracteres usadas como contraseña para asegurar dicho sistema',
+				'Es un método de auditoría que consiste en recuperar una clave probando todas las combinaciones posibles hasta encontrar aquella que permite el acceso',
 				'Es obligar por medio de aircrack-ng a que nuestra tarjeta se ponga en modo monitor aunque ésta no pueda'
 			)
 		)
