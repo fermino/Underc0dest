@@ -1,6 +1,8 @@
 <?php
 	error_reporting(0);
+
 	session_start();
+
 	if(is_file('underc0dest.class.php'))
 		require_once 'underc0dest.class.php';
 	else
